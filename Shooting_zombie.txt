@@ -1,0 +1,72 @@
+(Player)
+1. khi bấm vào lá cờ
+2. đặt life thành 3
+3. đặt score thành 0
+4. liên tục
+5. nếu phím w được bấm thì - thay đổi y một lượng 3
+6. nếu phím a được bấm thì - thay đổi x một lượng -3
+7. nếu phím s được bấm thì - thay đổi y một lượng -3
+8. nếu phím d được bấm thì - thay đổi x một lượng 3
+9. hướng về phía đối tượng con trỏ chuột
+10. bật lại nếu chạm cạnh
+
+(Player)
+1. nếu bấm vào lá cờ
+2. liên tục
+3. nếu chuột được nhấn thì 
+	bắt đầu âm thanh 
+	tạo bản sao của bullet 
+	đợi 0.5 giây
+
+
+-------------------------------------------------------------------------------------------
+
+
+(Bullet)
+1. khi bấm vào lá cờ 
+2. ẩn
+
+(Bullet)
+1. khi tôi bắt đầu là 1 bản sao
+2. hiện
+3. đi tới player
+4. đặt hướng bằng hướng của player
+5. di chuyển 20 bước
+6. lặp lại cho đến khi - đang chạm zombie hoặc đang chạm cạnh
+	di chuyển 10 bước
+8. xóa bản sao này
+
+
+-------------------------------------------------------------------------------------------
+
+
+(Zombie)
+1. khi bấm vào lá cờ
+2. tạo bản sao của bản thân tôi
+3. ẩn
+4. liên tục - tạo bản sao của bản thân tôi
+5. đợi 0.5 giây
+
+
+(Zombie)
+1. khi tôi bắt đầu 1 là bản sao
+2. hiện
+3. nếu lấy ngẫu nhiên từ 1 đến 2 = 1 thì 
+	đặt x bằng lấy ngẫu nhiên thì -300 đến -240
+	đặt y bằng lấy ngẫu nhiên thì -180 đến 180
+4. nếu không thì
+	đặt x bằng lấy ngẫu nhiên thì 240 đến 300
+	đặt y bằng lấy ngẫu nhiên thì -180 đến 180
+5. liên tục
+6. hướng về đối tượng player
+7. di chuyển 2 bước
+8. nếu đang chạm vào bullet thì 
+	thay đổi score một lượng 1 
+	đợi 0.01 giây
+	xóa bản sao này
+9. nếu đang chạm vào player thì
+	thay đổi life một lượng -1
+	bắt đầu âm thanh
+	đợi 1 giây
+	nếu life = 0 thì
+		dừng lại tất cả
